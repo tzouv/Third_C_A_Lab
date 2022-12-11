@@ -1,0 +1,5 @@
+McPAT (version 1.3 of Feb, 2015) is computing the target processor...
+ 
+XML Parsing error inside file 'ProcessorDescriptionFiles/Lab_3_xml/470_l2_assoc_4.xml'.
+Error: File not found
+At line 0, column 0.
