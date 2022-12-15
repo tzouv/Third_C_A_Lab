@@ -80,3 +80,67 @@ The McPAT simulator gives us the **peak power** data for each simulation. We run
 
 ![image](https://user-images.githubusercontent.com/118462296/207977665-10a881c1-aa5c-4e6c-9514-a372a448f853.png)
 
+
+_Question 3_
+
+It is difficult to determine the "ideal" architecture of processor for each benchmark based for all data of the labs. It looks like a multiple function variable which has the EPD data (from this lab), the CPI thas is calculated from the gem5 and the cost function that we presented on the second lab, as variables. So, we have to calculate the output of this function for each cache variable of each benchmark. It is difficult to find the accurate math function because each variable has different weigh on the final result. So we decided to choose the "ideal" architecture by observing the CPI graphs from 2nd result, the EDP graphs for this lab and the cost function.
+
+**401.bzip benchmark**
+
+The best solution for this benchmark is to choose a cache line equals to 128, because it offers a reduction of the CPI and the energy increases not so much, while cost is constant. The best L1 association is 4 because CPI is the small and also the energy and the cost are as small as posiible. We chose also the L1 data cache to be 64KB to reduce the CPI as much as we can with the EDP to be not so increased. The L1 data cache and also the parameters of the L2 cache will be the smallest because they have not affect on the CPI and keep the energy and cost low.
+The optimized CPU parameters for the 401 benchmark are the following:
+* Cache line = 128
+* L1 association = 4
+* L1 data cache size = 64KB
+* L1 instruction cache size = 16KB
+* L2 cache size = 4MB
+* L2 association = 4
+
+**429.mfc benchmark**
+
+The better option for the cache line is 32 because all the variables are the minimum possible. The best compromization between the CPI, the energy and the cost is when we select for L1 data size 32KB, for L1 instruction size 64KB and for L2 size 2MB. We can achieve small CPI and the increases on the energy and cost will be the smallest possible. The final parameters for this benchmark will be:
+* Cache line = 32
+* L1 association = 4
+* L1 data cache size = 32KB
+* L1 instruction cache size = 64KB
+* L2 cache size = 2MB
+* L2 association = 4
+
+**456.hmmer benchmark**
+
+To take the minimum possible CPI with the smallest increase on the EDP parameter and on the cost, we decided to choose the architecture:
+* Cache line = 128
+* L1 association = 4
+* L1 data cache size = 64KB
+* L1 instruction cache size = 32KB
+* L2 cache size = 1MB
+* L2 association = 4
+
+On this benchmark the gratest affect on the CPI has the cache line. But also increases a lot the total energy. So the best selection is on 128. Also, the L1 data size on 64KB has great affect on the CPI by keeping the energy on logic levels. The L2 parameters do not decrease the CPI, so we select the cheaper and less energy cost solution, which is the simpliest design.
+
+**458.sjeng benchmark**
+
+On this benchmark, the cache line size has an extremelly impact to decrease the CPI for 40%. However, the cost and the energy will be the maximum possible for this parameter, we choose this solution. We try to keep the EDP and the cost low by choosing the simpliest architecture on the other cache characteristics. The final results will be the following:
+* Cache line = 256
+* L1 association = 2
+* L1 data cache size = 16KB
+* L1 instruction cache size = 16KB
+* L2 cache size = 1MB
+* L2 association = 4
+
+**470.lbm benchmark**
+
+The minimum CPI to have faster program, can be achieved by using cache line 256. This will increase the EDP and the cost but in normal levels. Another good affect will have the L1 data cache on 32KB because we have the minimum possible energy and a small increament on the cost. As for the L1 instruction cache and for L2 we chose to use the simpliest architecture because does not have an effect on the CPI and the simpliest is the cheaper. The final design will be the following: 
+* Cache line = 256
+* L1 association = 4
+* L1 data cache size = 32KB
+* L1 instruction cache size = 16KB
+* L2 cache size = 1MB
+* L2 association = 4
+
+### **_Bibliography_**
+1. https://www.hpl.hp.com/research/mcpat/micro09.pdf
+2. Computer Architecture Hennessy John L. , Patterson David A. (6th Edition).
+
+### **_Review_**
+The final lab it is easier than the second because does not need so much time to wait for the simulation executions. Also we were more familiar with the scripts to take the data more quickly and the graphics are more easier by using the Microsoft excel program. The only difficult thing was the final question on the second part, because it is difficult to select the "ideal" architecture. It is a mltiple function problem with different weighs for each variable and also there is not so much bibliography on this part. So the results emerged for our experience on computer architecture.
