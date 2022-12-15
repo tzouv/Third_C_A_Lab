@@ -47,5 +47,36 @@ We can see from EDAP parameter that although ARM has 50 times more delay it is s
 
 _Question 1_
 
+Taking the results from gem5 simualtor and feed them on the McPAT, the simulator can give us information about the total leakage and the dynamic power. Also, the gem5 produces the simulated seconds of each benchmark. By comparing these data on the following formula we can calculate the **total energy** consumption of each benchmark:
 
+> Total energy = ( Total_Leakage + Runtime_Dynamic) * Sim_seconds (J)
+
+The final results of each cache parameter of each benchmark are presented on the following graphs:
+
+![image](https://user-images.githubusercontent.com/118462296/207976545-39a76fd4-f4dc-4ff3-893f-145db87f7665.png)
+
+![image](https://user-images.githubusercontent.com/118462296/207976644-18a1bec5-749b-49d2-bbb1-0b38858a4c30.png)
+
+![image](https://user-images.githubusercontent.com/118462296/207976709-a51337de-1fad-4077-939e-5346a7134906.png)
+
+![image](https://user-images.githubusercontent.com/118462296/207976730-4d32486c-cfbe-4bf0-8f95-da50c427154c.png)
+
+![image](https://user-images.githubusercontent.com/118462296/207976746-1094f4b8-0caf-4dde-b188-63868f4f38d4.png)
+
+**Comments**
+Typically, the more complexity of the cache design, the more energy consumes the CPU to execute the benchmarks. We can observe that some parameters have larger affect on the energy than others and the L2 cache design does not have big impact on the total energy.
+
+_Question 2_
+
+The McPAT simulator gives us the **peak power** data for each simulation. We run the program for each cache parameters of the benchmarks, and the following results are presented below:
+
+![image](https://user-images.githubusercontent.com/118462296/207977481-25e5fdc6-af03-48aa-bf3e-e416303e34b9.png)
+
+![image](https://user-images.githubusercontent.com/118462296/207977528-956f420b-3e63-44d6-9d73-33445a913311.png)
+
+![image](https://user-images.githubusercontent.com/118462296/207977588-d5a6aeeb-c5c0-42d2-b7e9-48a29a97e2d9.png)
+
+![image](https://user-images.githubusercontent.com/118462296/207977609-f11fe2c1-c5ba-49b4-949a-25ead1016c95.png)
+
+![image](https://user-images.githubusercontent.com/118462296/207977665-10a881c1-aa5c-4e6c-9514-a372a448f853.png)
 
