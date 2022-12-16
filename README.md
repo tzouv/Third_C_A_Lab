@@ -141,6 +141,20 @@ The minimum CPI to have faster program, can be achieved by using cache line 256.
 * L2 cache size = 1MB
 * L2 association = 4
 
+**Results Reliability**
+
+  In order to be an accurate power and area modeling tool McPAT need to have both relative and absolute accuracy. Relative accuracy means that changes in modeled power 
+as a result of architecture modifications should reflect on a relative scale the changes one would see in a real design. The relative accuracy of McPAT ensures that 
+the relative power weights of different components of a chip have been correctly modeled. While the absolute magnitude accuracy of McPAT means that the power numbers 
+for individual components and total power are evaluated correctly.Some of the reasons that may result in a difference between the modeled power numbers and actual 
+data, are that McPAT only models on-chip memory controllers/channels as I/Os , while cpus are complicated SOC with different types of I/Os including memory, PCI-e, and 
+Ethernet which are unknown parts McPAT doesn't model in detail. Although, these errors on both area and power considered acceptable. The use of different modeling 
+programms for the evaluation of two different sides of the same system can import more errors , since one programm is based in the evaluations of the other.  And if 
+the evaluations has some errors these errors are imported directly to the model of the other. 
+
+
+
+
 ### **_Bibliography_**
 1. https://www.hpl.hp.com/research/mcpat/micro09.pdf
 2. Computer Architecture Hennessy John L. , Patterson David A. (6th Edition).
