@@ -43,8 +43,8 @@ By using the formula above, the results are the following:
 
 We can see from EDAP parameter that although ARM has 50 times more delay it is still much more energy efficient.
 Moreover from McPAT results we can see that:
-Xeon peak power = 134.938W
-ARM  peak power =1.74189W
+* Xeon peak power = 134.938W
+* ARM  peak power =1.74189W
 
 ### **_Second Part: Gem5 and McPAT: EDP improvement_**
 
