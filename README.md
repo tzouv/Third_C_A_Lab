@@ -42,6 +42,9 @@ By using the formula above, the results are the following:
 * ARM EDAP = 850.1267084x
 
 We can see from EDAP parameter that although ARM has 50 times more delay it is still much more energy efficient.
+Moreover from McPAT results we can see that:
+Xeon peak power = 134.938W
+ARM  peak power =1.74189W
 
 ### **_Second Part: Gem5 and McPAT: EDP improvement_**
 
@@ -143,4 +146,6 @@ The minimum CPI to have faster program, can be achieved by using cache line 256.
 2. Computer Architecture Hennessy John L. , Patterson David A. (6th Edition).
 
 ### **_Review_**
-The final lab it is easier than the second because does not need so much time to wait for the simulation executions. Also we were more familiar with the scripts to take the data more quickly and the graphics are more easier by using the Microsoft excel program. The only difficult thing was the final question on the second part, because it is difficult to select the "ideal" architecture. It is a mltiple function problem with different weighs for each variable and also there is not so much bibliography on this part. So the results emerged for our experience on computer architecture.
+
+In this lab we got familiar with McPAT ,a modeling tool for power of different cpu architectures. The final lab was easier than the second because does not need so much time to wait for the simulation executions. Also we were more familiar with the scripts to take the data more quickly and the graphics are more easier by using the Microsoft excel program. The questions of the first step of this lab demanded more searching in the bibliography and had more critical thinking than the other labs. Another difficult thing was the final question on the second part, because it is difficult to select the "ideal" architecture. It is a mltiple function problem with different weighs for each variable and also there is not so much bibliography on this part. So the results emerged for our experience on computer architecture. In general the lab was very educational and with the other two labs combined gave us a valid example as how modern computer architects operate and the things they take into consideration when designing a cpu.
+
